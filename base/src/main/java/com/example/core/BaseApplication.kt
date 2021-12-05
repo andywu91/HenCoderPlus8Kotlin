@@ -14,8 +14,9 @@ class BaseApplication :Application(){
     }
 
     companion object{
-
-        var currentApplication: Context? = null
+        @JvmStatic
+        @get:JvmName("currentApplication")
+        lateinit var currentApplication: Context
         private set
 
     }
